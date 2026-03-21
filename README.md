@@ -22,28 +22,6 @@
 | Caffe | DNN 深度学习模型推理 |
 
 ## 📁 项目结构
-Face-Detection-System/
-│
-├── face_detection.py # 主程序
-├── requirements.txt # Python 依赖包列表
-├── .gitignore # Git 忽略文件配置
-│
-├── models/ # DNN 模型文件目录（需手动下载）
-│ ├── deploy.prototxt # 模型配置文件
-│ └── res10_300x300_ssd_iter_140000.caffemodel # 预训练权重
-│
-├── results/ # 检测结果输出目录（自动生成）
-│ └── 20241201_143052/ # 按时间戳命名的结果文件夹
-│ ├── 01_original_with_hist.jpg # 原始图像+直方图
-│ ├── 02_enhanced.jpg # 增强后图像
-│ ├── 03_marked1.jpg # Haar 检测标记结果
-│ └── 04_marked2.jpg # DNN 检测标记结果
-│
-└── samples/ # 测试样例目录（可选）
-├── test_image.jpg
-└── test_video.mp4
-
-### 环境安装
 Face-Detection-System/  
 │  
 ├── face_detection.py # 主程序  
@@ -103,28 +81,6 @@ python face_detection.py
 实时显示人脸检测框  
 按 ESC 键退出检测  
 
-📊 检测算法说明  
-Haar 级联检测器  
-使用 OpenCV 预训练的 haarcascade_frontalface_default.xml  
-参数调优：scaleFactor=1.05, minNeighbors=7, minSize=(50,50)  
-优点：速度快，无需额外模型文件  
-缺点：对角度、光照变化敏感  
-DNN 检测器（SSD + ResNet）  
-使用 Caffe 框架的 SSD 模型  
-输入尺寸：300×300  
-置信度阈值：0.7  
-支持 CUDA 加速（自动检测并启用）  
-优点：精度高，对遮挡和角度变化鲁棒  
-缺点：需要下载模型文件，速度较慢  
-图像增强模块  
-CLAHE（自适应直方图均衡化）：提高局部对比度  
-clipLimit=3.0，tileGridSize=(8,8)  
-锐化处理：增强图像边缘  
-卷积核：[[0,-1,0], [-1,5,-1], [0,-1,0]]  
-面部特征标记  
-眼睛：使用 haarcascade_eye.xml、haarcascade_lefteye_2splits.xml、haarcascade_righteye_2splits.xml  
-鼻子：使用 haarcascade_mcs_nose.xml  
- 参数调优：scaleFactor=1.05-1.1，minNeighbors=5-7  
 ## 📊 检测算法说明
 Haar 级联检测器：  
 使用 OpenCV 预训练的 haarcascade_frontalface_default.xml  
