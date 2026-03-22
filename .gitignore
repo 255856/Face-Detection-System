@@ -1,0 +1,141 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+pythonenv*
+
+# 虚拟环境
+venv/
+.virtualenv/
+.venv/
+virtualenv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+
+# 项目生成的结果文件
+results/
+output/
+outputs/
+processed_images/
+detection_results/
+
+# 图片和视频文件（如果不想提交测试数据）
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.tiff
+*.webp
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.gif
+
+# 但保留示例图片（如果需要）
+!samples/example.jpg
+!samples/README.md
+
+# 模型文件（通常比较大）
+*.caffemodel
+*.pb
+*.h5
+*.pth
+*.pt
+*.onnx
+*.tflite
+*.weights
+*.bin
+*.prototxt
+*.xml
+
+# 但保留Haar级联文件说明
+!haarcascade_*.xml
+!*.md
+
+# 日志文件
+*.log
+logs/
+*.out
+*.err
+
+# 临时文件
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# 配置文件（包含敏感信息）
+config.local.py
+config.private.py
+.secrets
+*.key
+*.pem
+
+# 打包文件
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# 系统文件
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# 测试文件
+test_*.py
+*_test.py
+tests/__pycache__/
+
+# 覆盖率报告
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.hypothesis/
+
+# 文档构建
+docs/_build/
+site/
+
+# 数据文件
+data/
+datasets/
+*.db
+*.sqlite
+*.sqlite3
+
+# 其他
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+*.egg
+MANIFEST
